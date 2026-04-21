@@ -39,7 +39,7 @@ export default function HomePage() {
             { icon: <Truck size={28} />, title: 'Free Delivery', desc: 'Complimentary delivery on all orders across Lahore.' },
           ].map((f, i) => (
             <div key={i} className="card" style={{ padding: '2rem', textAlign: 'center', background: 'var(--color-surface)' }}>
-              <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(255,69,0,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', color: 'var(--color-primary)' }}>{f.icon}</div>
+              <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(0,114,198,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', color: 'var(--color-primary)' }}>{f.icon}</div>
               <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>{f.title}</h3>
               <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>{f.desc}</p>
             </div>
@@ -65,7 +65,7 @@ export default function HomePage() {
       {/* CTA Banner */}
       <section style={{ position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${MENU_DATA[9].image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,69,0,0.9) 0%, rgba(200,40,0,0.85) 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(0,114,198,0.9) 0%, rgba(0,90,158,0.85) 100%)' }} />
         <div className="container" style={{ position: 'relative', zIndex: 2, padding: '5rem 1.5rem', textAlign: 'center' }}>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#fff' }}>Ready to Order?</h2>
           <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.9)', marginBottom: '2rem', maxWidth: '500px', margin: '0 auto 2rem' }}>Browse our full menu and get authentic Japanese cuisine delivered to your door!</p>

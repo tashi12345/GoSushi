@@ -50,7 +50,7 @@ export default function ContactPage() {
                 { icon: <Clock size={20} />, title: 'Hours', value: '11:00 AM - 11:00 PM', sub: 'Open 7 days a week' },
               ].map((c, i) => (
                 <div key={i} className="card" style={{ padding: '1.25rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                  <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(255,69,0,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', flexShrink: 0 }}>{c.icon}</div>
+                  <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(0,114,198,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', flexShrink: 0 }}>{c.icon}</div>
                   <div>
                     <h4 style={{ fontSize: '0.95rem', marginBottom: '0.25rem' }}>{c.title}</h4>
                     <p style={{ color: 'var(--color-text)', fontSize: '0.95rem', fontWeight: 600 }}>{c.value}</p>
@@ -68,7 +68,7 @@ export default function ContactPage() {
               { name: 'Johar Town', addr: 'Block G1, Johar Town, Lahore' },
             ].map((b, i) => (
               <div key={i} className="card" style={{ padding: '1.25rem', marginBottom: '1rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(255,69,0,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', flexShrink: 0 }}><MapPin size={20} /></div>
+                <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(0,114,198,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', flexShrink: 0 }}><MapPin size={20} /></div>
                 <div>
                   <h4 style={{ fontSize: '0.95rem' }}>Go Sushi — {b.name}</h4>
                   <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.85rem' }}>{b.addr}</p>

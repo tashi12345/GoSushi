@@ -45,7 +45,7 @@ function StaffLayout() {
               display: 'flex', alignItems: 'center', gap: '12px', padding: '0.75rem 1rem',
               borderRadius: 'var(--radius-md)', marginBottom: '0.25rem', fontSize: '0.9rem', fontWeight: 500,
               color: isActive(l.to, l.exact) ? '#fff' : 'var(--color-text-secondary)',
-              background: isActive(l.to, l.exact) ? 'rgba(255,69,0,0.12)' : 'transparent',
+              background: isActive(l.to, l.exact) ? 'rgba(0,114,198,0.12)' : 'transparent',
               borderLeft: isActive(l.to, l.exact) ? '3px solid var(--color-primary)' : '3px solid transparent',
               transition: 'all var(--transition)'
             }}>

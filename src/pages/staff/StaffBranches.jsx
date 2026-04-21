@@ -63,7 +63,7 @@ export default function StaffBranches() {
           <div key={b.id} className="stat-card" style={{ borderLeft: `4px solid ${b.status === 'active' ? 'var(--color-success)' : 'var(--color-text-muted)'}` }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <div style={{ width: '42px', height: '42px', borderRadius: 'var(--radius-md)', background: 'rgba(255,69,0,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)' }}>
+                <div style={{ width: '42px', height: '42px', borderRadius: 'var(--radius-md)', background: 'rgba(0,114,198,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)' }}>
                   <Building2 size={20} />
                 </div>
                 <div>
