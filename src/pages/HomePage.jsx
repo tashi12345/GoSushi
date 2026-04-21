@@ -11,20 +11,28 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${HERO_IMAGE})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.7) 50%, rgba(5,5,5,0.85) 100%)' }} />
-        <div className="container animate-slide-up" style={{ position: 'relative', zIndex: 2, maxWidth: '700px' }}>
-          <span className="badge badge-primary" style={{ marginBottom: '1.5rem', fontSize: '0.8rem', padding: '0.4rem 1rem' }}>🍣 Lahore's #1 Sushi Destination</span>
-          <h2 style={{ fontSize: '4rem', marginBottom: '1.5rem', lineHeight: 1.05 }}>
-            The Original<br /><span style={{ color: 'var(--color-primary)' }}>Sushi Bar</span>
+      <section style={{ position: 'relative', minHeight: '90vh', display: 'flex', alignItems: 'center', overflow: 'hidden', paddingTop: '64px' }}>
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${HERO_IMAGE})`, backgroundSize: 'cover', backgroundPosition: 'center', transform: 'scale(1.05)', animation: 'pulse 15s ease infinite alternate' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.7) 50%, rgba(0,114,198,0.15) 100%)' }} />
+        
+        {/* Floating Background Element */}
+        <div style={{ position: 'absolute', right: '-10%', top: '20%', width: '40vw', height: '40vw', background: 'radial-gradient(circle, rgba(0,114,198,0.2) 0%, transparent 60%)', filter: 'blur(60px)', zIndex: 1 }} />
+
+        <div className="container animate-slide-up" style={{ position: 'relative', zIndex: 2, maxWidth: '800px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '0.5rem 1.25rem', background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '99px', marginBottom: '2rem' }}>
+            <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--color-success)', boxShadow: '0 0 10px var(--color-success)' }} />
+            <span style={{ fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.5px' }}>Now delivering across Lahore</span>
+          </div>
+          
+          <h2 style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', marginBottom: '1.5rem', lineHeight: 1.05, letterSpacing: '-1.5px', textShadow: '0 20px 40px rgba(0,0,0,0.5)' }}>
+            The Original<br /><span style={{ color: 'var(--color-primary)', textShadow: '0 0 40px rgba(0,114,198,0.5)' }}>Sushi Bar</span>
           </h2>
-          <p style={{ fontSize: '1.2rem', color: 'var(--color-text-secondary)', marginBottom: '2.5rem', maxWidth: '550px', lineHeight: 1.7 }}>
+          <p style={{ fontSize: '1.25rem', color: 'var(--color-text-secondary)', marginBottom: '3rem', maxWidth: '550px', lineHeight: 1.8 }}>
             Experience authentic Japanese cuisine, hand-crafted with premium ingredients and delivered fresh to your door across Lahore.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <Link to="/menu" className="btn btn-primary btn-lg"><ChefHat size={18} /> Explore Menu</Link>
-            <Link to="/about" className="btn btn-outline btn-lg">Our Story <ArrowRight size={16} /></Link>
+            <Link to="/menu" className="btn btn-primary btn-lg" style={{ fontSize: '1.1rem', padding: '1.1rem 2.5rem' }}><ChefHat size={20} /> Explore Menu</Link>
+            <Link to="/about" className="btn btn-outline btn-lg" style={{ fontSize: '1.1rem', padding: '1.1rem 2.5rem', backdropFilter: 'blur(5px)' }}>Our Story <ArrowRight size={18} /></Link>
           </div>
         </div>
       </section>

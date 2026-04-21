@@ -9,15 +9,15 @@
   --color-border-hover: rgba(255,255,255,0.12);
   --color-primary: #0072C6;
   --color-primary-hover: #005A9E;
-  --color-primary-glow: rgba(0,114,198,0.25);
+  --color-primary-glow: rgba(0,114,198,0.3);
   --color-accent: #33A1FD;
-  --color-success: #22C55E;
-  --color-warning: #F59E0B;
-  --color-danger: #EF4444;
-  --color-info: #3B82F6;
-  --color-text: #F5F5F5;
-  --color-text-secondary: #A0A8B4;
-  --color-text-muted: #6B7280;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-info: #3b82f6;
+  --color-text: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-heading: 'Outfit', system-ui, sans-serif;
   --radius-sm: 8px;
@@ -39,10 +39,14 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   background: var(--color-bg);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(0, 114, 198, 0.05), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(51, 161, 253, 0.05), transparent 25%);
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); font-weight: 700; line-height: 1.15; }
