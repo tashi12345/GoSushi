@@ -1,4 +1,5 @@
 import React from 'react';
+import heroBgImg from '../assets/hero_bg.png';
 
 export default function Hero() {
   return (
@@ -13,7 +14,7 @@ export default function Hero() {
       <div style={{
         position: 'absolute',
         top: 0, left: 0, right: 0, bottom: 0,
-        backgroundImage: 'url("/hero_bg.png")',
+        backgroundImage: `url(${heroBgImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         zIndex: 0
