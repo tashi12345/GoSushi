@@ -7,7 +7,18 @@
     <meta name="description" content="Go Sushi — Lahore's Original Premium Sushi Bar. Order fresh maki, nigiri, sashimi, and bento boxes online. Fast delivery across Gulberg, DHA, and Johar Town." />
     <meta name="theme-color" content="#050505" />
     <title>Go Sushi — The Original Sushi Bar | Lahore</title>
-    <script type="module" crossorigin src="/GoSushi/assets/index-BcoKynuE.js"></script>
+    <!-- SPA redirect handler for GitHub Pages -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location))
+    </script>
+    <script type="module" crossorigin src="/GoSushi/assets/index-DCjfdTMb.js"></script>
     <link rel="stylesheet" crossorigin href="/GoSushi/assets/index-D9ft8j4S.css">
   </head>
   <body>
