@@ -1,17 +1,48 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CustomerApp from './pages/CustomerApp';
-import BranchDashboard from './pages/BranchDashboard';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import Navbar from './components/Navbar';
+import CartDrawer from './components/CartDrawer';
+import HomePage from './pages/HomePage';
+import MenuPage from './pages/MenuPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import CheckoutPage from './pages/CheckoutPage';
+import StaffPortal from './pages/StaffPortal';
+import './index.css';
 
-function App() {
+function CustomerLayout() {
+  const [cartOpen, setCartOpen] = useState(false);
+
   return (
-    <Router>
+    <>
+      <Navbar onCartOpen={() => setCartOpen(true)} />
+      <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
       <Routes>
-        <Route path="/*" element={<CustomerApp />} />
-        <Route path="/branch/*" element={<BranchDashboard />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
-export default App;
+function AppRoutes() {
+  const location = useLocation();
+  const isStaff = location.pathname.startsWith('/staff');
+
+  if (isStaff) return <Routes><Route path="/staff/*" element={<StaffPortal />} /></Routes>;
+  return <CustomerLayout />;
+}
+
+export default function App() {
+  return (
+    <CartProvider>
+      <BrowserRouter basename="/GoSushi">
+        <AppRoutes />
+      </BrowserRouter>
+    </CartProvider>
+  );
+}
