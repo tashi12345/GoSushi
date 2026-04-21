@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/GoSushi/',
+  base: process.env.VERCEL ? '/' : '/GoSushi/',
   build: {
     // Skip type checking and linting during build
     rollupOptions: {

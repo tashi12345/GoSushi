@@ -40,7 +40,7 @@ function AppRoutes() {
 export default function App() {
   return (
     <CartProvider>
-      <BrowserRouter basename="/GoSushi">
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <AppRoutes />
       </BrowserRouter>
     </CartProvider>
