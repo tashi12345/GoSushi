@@ -29,7 +29,6 @@ export default function Footer() {
               <li><Link to="/menu" style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem', transition: 'color var(--transition)' }}>Our Menu</Link></li>
               <li><Link to="/about" style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>About Us</Link></li>
               <li><Link to="/contact" style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>Contact</Link></li>
-              <li><Link to="/staff" style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>Staff Portal</Link></li>
             </ul>
           </div>
 

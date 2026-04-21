@@ -48,7 +48,6 @@ export default function Navbar({ onCartOpen }) {
                 paddingBottom: '4px'
               }}>{l.label}</Link>
             ))}
-            <Link to="/staff" style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', fontWeight: 500 }}>Staff Portal →</Link>
             <button className="btn btn-primary btn-sm" onClick={onCartOpen} style={{ position: 'relative' }}>
               <ShoppingBag size={16} />
               Cart
@@ -74,7 +73,6 @@ export default function Navbar({ onCartOpen }) {
             {links.map(l => (
               <Link key={l.to} to={l.to} onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '0.75rem 0', fontWeight: 600, fontSize: '0.95rem', color: location.pathname === l.to ? 'var(--color-primary)' : 'var(--color-text-secondary)' }}>{l.label}</Link>
             ))}
-            <Link to="/staff" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '0.75rem 0', fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>Staff Portal →</Link>
           </div>
         )}
       </header>
