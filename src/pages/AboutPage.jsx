@@ -1,7 +1,6 @@
 import React from 'react';
 import { Award, Users, MapPin, Heart } from 'lucide-react';
-import heroBgImg from '../assets/hero_bg.png';
-import sushiBoxImg from '../assets/sushi_box.png';
+import { HERO_IMAGE, MENU_DATA } from '../data/menuData';
 import Footer from '../components/Footer';
 
 export default function AboutPage() {
@@ -9,7 +8,7 @@ export default function AboutPage() {
     <div>
       {/* Hero */}
       <section style={{ position: 'relative', padding: '6rem 0', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${sushiBoxImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${MENU_DATA[6].image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(5,5,5,0.85), rgba(5,5,5,0.95))' }} />
         <div className="container animate-slide-up" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <span className="badge badge-primary" style={{ marginBottom: '1rem' }}>Our Story</span>
@@ -35,7 +34,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
-            <img src={heroBgImg} alt="Go Sushi food" style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
+            <img src={HERO_IMAGE} alt="Go Sushi food" style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
           </div>
         </div>
       </section>
@@ -47,8 +46,8 @@ export default function AboutPage() {
             {[
               { icon: <MapPin size={28} />, value: '3', label: 'Branches in Lahore' },
               { icon: <Users size={28} />, value: '10,000+', label: 'Happy Customers' },
-              { icon: <Award size={28} />, value: '16+', label: 'Menu Items' },
-              { icon: <Heart size={28} />, value: '4.8★', label: 'Average Rating' },
+              { icon: <Award size={28} />, value: '22+', label: 'Menu Items' },
+              { icon: <Heart size={28} />, value: '4.7★', label: 'Foodpanda Rating' },
             ].map((s, i) => (
               <div key={i} style={{ padding: '2rem' }}>
                 <div style={{ color: 'var(--color-primary)', marginBottom: '0.75rem', display: 'flex', justifyContent: 'center' }}>{s.icon}</div>

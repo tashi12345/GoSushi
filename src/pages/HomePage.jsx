@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Clock, Truck, ChefHat } from 'lucide-react';
-import heroBgImg from '../assets/hero_bg.png';
-import makiRollImg from '../assets/maki_roll.png';
-import sushiBoxImg from '../assets/sushi_box.png';
-import { MENU_DATA } from '../data/menuData';
+import { MENU_DATA, HERO_IMAGE } from '../data/menuData';
 import MenuCard from '../components/MenuCard';
 import Footer from '../components/Footer';
 
@@ -15,7 +12,7 @@ export default function HomePage() {
     <div>
       {/* Hero */}
       <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${heroBgImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${HERO_IMAGE})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.7) 50%, rgba(5,5,5,0.85) 100%)' }} />
         <div className="container animate-slide-up" style={{ position: 'relative', zIndex: 2, maxWidth: '700px' }}>
           <span className="badge badge-primary" style={{ marginBottom: '1.5rem', fontSize: '0.8rem', padding: '0.4rem 1rem' }}>🍣 Lahore's #1 Sushi Destination</span>
@@ -67,7 +64,7 @@ export default function HomePage() {
 
       {/* CTA Banner */}
       <section style={{ position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${sushiBoxImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${MENU_DATA[9].image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,69,0,0.9) 0%, rgba(200,40,0,0.85) 100%)' }} />
         <div className="container" style={{ position: 'relative', zIndex: 2, padding: '5rem 1.5rem', textAlign: 'center' }}>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#fff' }}>Ready to Order?</h2>
